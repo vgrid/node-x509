@@ -1,12 +1,19 @@
 {
   "name": "x509",
-  "version": "0.3.3",
-  "description": "Simple X509 certificate parser.",
+  "version": "0.4.0",
+  "description": "Simple X509 certificate parser; forked verion from Southern/x509",
   "author": "Colton Baker",
+  "contributors": [
+    {
+      "name": "Matthew White",
+      "email": "whitemat@uk.ibm.com",
+      "url": "https://github.com/mbwhite/"
+    }
+  ],
   "main": "index.js",
   "repository": {
     "type": "git",
-    "url": "git@github.com:Southern/node-x509.git"
+    "url": "git@github.com:ampretia/node-x509.git"
   },
   "scripts": {
     "test": "node test/test"
@@ -14,5 +21,8 @@
   "license": "MIT",
   "dependencies": {
     "nan": "2.12.0"
+  },
+  "devDependencies": {
+    "mocha": "^5.2.0"
   }
 }
