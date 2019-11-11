@@ -20,6 +20,7 @@ exports.verify = function(certPath, CABundlePath, cb) {
       return cb(certPathErr);
     }
 
+    
     fs.stat(CABundlePath, function(bundlePathErr) {
 
       if (bundlePathErr) {
@@ -39,7 +40,9 @@ exports.verify = function(certPath, CABundlePath, cb) {
 
 
 exports.parseCert = function(path) {
+  console.log(path)
   var ret = x509.parseCert(path);
+  console.log(ret);
   var exts = {};
   for (var key in ret.extensions) {
     var newkey = key.replace('X509v3', '').replace(/ /g, '');
