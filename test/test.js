@@ -3,15 +3,22 @@ var x509 = require('../index'),
     path = require('path'),
     assert = require('assert');
 
+let data = {};
+
 // All cert files should read without throwing an error.
 // Simple enough test, no?
 fs.readdirSync(path.join(__dirname, 'certs')).forEach(function (file) {
+  data[file]= x509.parseCert(path.join(__dirname, 'certs', file)) 
   console.log("File: %s", file);
   console.log(x509.parseCert(path.join(__dirname, 'certs', file)));
   // x509.parseCert(path.join(__dirname, 'certs', file));
   console.log();
 });
 
+
+let filename = `${process.version}-results.json`;
+
+fs.writeFileSync(filename,JSON.stringify(data));
 
 x509.verify(
   path.join(__dirname, 'certs/enduser-example.com.crt'),

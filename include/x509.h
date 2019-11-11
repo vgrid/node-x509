@@ -2,7 +2,7 @@
 #define __x509_h
 
 // Include header for addon version, node/v8 inclusions, etc.
-#include <addon.h>
+//#include <addon.h>
 #include <nan.h>
 #include <node_version.h>
 #include <string>
