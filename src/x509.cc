@@ -1,10 +1,13 @@
+/*
+ * SPDX-License-Identifier: Apache-2.0
+ */
+
 #include <node.h>
 #include <string>
 #include <iostream>
 #include <cstring>
 #include <sstream>
 #include "x509.h"
-
 
 using namespace v8;
 
@@ -134,29 +137,31 @@ NAN_METHOD(get_altnames) {
 }
 
 NAN_METHOD(get_subject) {
-  // Nan::HandleScope scope;
-  // std::string parsed_arg = parse_args(info);
-  // if(parsed_arg.size() == 0) {
-  //   info.GetReturnValue().SetUndefined();
-  // }
-  // Local<Object> exports(try_parse(parsed_arg));
-  // Local<Value> key = Nan::New<String>("subject").ToLocalChecked();
-  // info.GetReturnValue().Set(
-  //   Nan::Get(exports, key).ToLocalChecked());
-  // ERR_clear_error();
+  Nan::HandleScope scope;
+  std::string parsed_arg = parse_args(info);
+  if(parsed_arg.size() == 0) {
+    info.GetReturnValue().SetUndefined();
+  }
+
+  v8::Local<v8::Object> obj = Nan::New<v8::Object>();
+  Nan::Set(obj, Nan::New("subject").ToLocalChecked(), try_parse(parsed_arg));
+  info.GetReturnValue().Set(obj);
+
+  ERR_clear_error();
 }
 
 NAN_METHOD(get_issuer) {
-  // Nan::HandleScope scope;
-  // std::string parsed_arg = parse_args(info);
-  // if(parsed_arg.size() == 0) {
-  //   info.GetReturnValue().SetUndefined();
-  // }
-  // Local<Object> exports(try_parse(parsed_arg));
-  // Local<Value> key = Nan::New<String>("issuer").ToLocalChecked();
-  // info.GetReturnValue().Set(
-  //   Nan::Get(exports, key).ToLocalChecked());
-  // ERR_clear_error();
+  Nan::HandleScope scope;
+  std::string parsed_arg = parse_args(info);
+  if(parsed_arg.size() == 0) {
+    info.GetReturnValue().SetUndefined();
+  }
+
+  v8::Local<v8::Object> obj = Nan::New<v8::Object>();
+  Nan::Set(obj, Nan::New("issuer").ToLocalChecked(), try_parse(parsed_arg));
+  info.GetReturnValue().Set(obj);
+
+  ERR_clear_error();
 }
 
 NAN_METHOD(parse_cert) {
@@ -169,8 +174,6 @@ NAN_METHOD(parse_cert) {
   Nan::Set(obj, Nan::New("exports").ToLocalChecked(), try_parse(parsed_arg));
   info.GetReturnValue().Set(obj);
 
-  // Local<Object> exports(try_parse(parsed_arg));
-  // info.GetReturnValue().Set(exports);
   ERR_clear_error();
 }
 

@@ -1,4 +1,8 @@
+/*
+ * SPDX-License-Identifier: Apache-2.0
+ */
 var x509 = require('./build/Release/x509');
+
 var fs = require('fs');
 
 exports.version = x509.version;
@@ -40,9 +44,8 @@ exports.verify = function(certPath, CABundlePath, cb) {
 
 
 exports.parseCert = function(path) {
-  console.log(path)
+  
   var ret = x509.parseCert(path);
-  console.log(ret);
   var exts = {};
   for (var key in ret.extensions) {
     var newkey = key.replace('X509v3', '').replace(/ /g, '');

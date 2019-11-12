@@ -1,9 +1,11 @@
 node-x509
 =========
 
-[![Build Status](https://travis-ci.org/Southern/node-x509.svg?branch=master)](https://travis-ci.org/Southern/node-x509)
+[![Build Status](https://dev.azure.com/ampretia/node-x509/_apis/build/status/ampretia.node-x509?branchName=master)](https://dev.azure.com/ampretia/node-x509/_build/latest?definitionId=3&branchName=master)
 
 Simple X509 certificate parser.
+
+This is a fork of the original node-x509 parser - with the same level of function but confirmed working across LTS node versions (v8, v10, v12).
 
 ## Installation
 
