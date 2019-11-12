@@ -1,3 +1,7 @@
+/*
+ * SPDX-License-Identifier: Apache-2.0
+ */
+
 var x509 = require('../index'),
     fs = require('fs'),
     path = require('path'),
