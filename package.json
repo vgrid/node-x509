@@ -16,7 +16,8 @@
     "url": "git@github.com:ampretia/node-x509.git"
   },
   "scripts": {
-    "build": "node-gyp build",
+    "configure" : "node-gyp configure",
+    "build": "npm run configure &&  node-gyp build",
     "clean": "rm -rf node_modules && rm package-lock.json && rm -rf build",
     "test": "node test/test",
     "release": "standard-version"

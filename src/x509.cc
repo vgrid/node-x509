@@ -129,10 +129,6 @@ NAN_METHOD(get_altnames) {
   Nan::Set(obj, Nan::New("altNames").ToLocalChecked(), try_parse(parsed_arg));
   info.GetReturnValue().Set(obj);
 
-  // Local<Object> exports(try_parse(parsed_arg)->ToObject(Nan::GetCurrentContext()));
-  // Local<Value> key = Nan::New<String>("altNames").ToLocalChecked();
-  // info.GetReturnValue().Set(
-  //   Nan::Get(exports, key).ToLocalChecked());
   ERR_clear_error();
 }
 
