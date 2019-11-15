@@ -45,7 +45,7 @@ exports.verify = function(certPath, CABundlePath, cb) {
 
 exports.parseCert = function(path) {
   
-  var ret = x509.parseCert(path);
+  var ret = x509.parseCert(path).exports;
   var exts = {};
   for (var key in ret.extensions) {
     var newkey = key.replace('X509v3', '').replace(/ /g, '');
