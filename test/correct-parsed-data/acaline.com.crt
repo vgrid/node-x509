@@ -1,0 +1,40 @@
+{
+    "version": 2,
+    "subject": {
+        "organizationalUnitName": "Domain Control Validated",
+        "commonName": "www.acaline.com"
+    },
+    "issuer": {
+        "countryName": "US",
+        "stateOrProvinceName": "Arizona",
+        "localityName": "Scottsdale",
+        "organizationName": "GoDaddy.com, Inc.",
+        "organizationalUnitName": "http://certificates.godaddy.com/repository",
+        "commonName": "Go Daddy Secure Certification Authority",
+        "serialNumber": "07969287"
+    },
+    "serial": "27ACAE30B9F323",
+    "notBefore": "2013-04-26T14:51:17.000Z",
+    "notAfter": "2014-04-26T14:51:17.000Z",
+    "subjectHash": "2c7c97ff",
+    "signatureAlgorithm": "sha1WithRSAEncryption",
+    "fingerPrint": "FA:BE:B5:9B:ED:C2:2B:42:7E:B1:45:C8:9A:8A:73:16:4A:A0:10:09",
+    "publicKey": {
+        "algorithm": "sha1WithRSAEncryption"
+    },
+    "altNames": [
+        "www.acaline.com",
+        "acaline.com"
+    ],
+    "extensions": {
+        "basicConstraints": "CA:FALSE",
+        "extendedKeyUsage": "TLS Web Server Authentication, TLS Web Client Authentication",
+        "keyUsage": "Digital Signature, Key Encipherment",
+        "cRLDistributionPoints": "Full Name:\n  URI:http://crl.godaddy.com/gds1-90.crl",
+        "certificatePolicies": "Policy: 2.16.840.1.114413.1.7.23.1\n  CPS: http://certificates.godaddy.com/repository/",
+        "authorityInformationAccess": "OCSP - URI:http://ocsp.godaddy.com/\nCA Issuers - URI:http://certificates.godaddy.com/repository/gd_intermediate.crt",
+        "authorityKeyIdentifier": "keyid:FD:AC:61:32:93:6C:45:D6:E2:EE:85:5F:9A:BA:E7:76:99:68:CC:E7",
+        "subjectAlternativeName": "DNS:www.acaline.com, DNS:acaline.com",
+        "subjectKeyIdentifier": "E6:61:14:4E:5A:4B:51:0C:4E:6C:5E:3C:79:61:65:D4:BD:64:94:BE"
+    }
+}

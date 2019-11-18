@@ -227,6 +227,7 @@ Local<Value> try_parse(const std::string& dataString) {
   Nan::Set(exports,
     Nan::New<String>("version").ToLocalChecked(),
     Nan::New<Integer>((int) X509_get_version(cert)));
+
   Nan::Set(exports,
     Nan::New<String>("subject").ToLocalChecked(),
     parse_name(X509_get_subject_name(cert)));

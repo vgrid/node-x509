@@ -25,7 +25,10 @@ using v8::Array;
 using v8::Exception;
 
 NAN_MODULE_INIT(init){
-   
+  Nan::Set(target,
+    Nan::New<String>("version").ToLocalChecked(),
+    Nan::New<String>(VERSION).ToLocalChecked());
+
   Nan::Set(target,
     Nan::New<String>("verify").ToLocalChecked(),
     Nan::GetFunction(Nan::New<v8::FunctionTemplate>(verify)).ToLocalChecked() );
