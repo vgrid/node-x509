@@ -1,6 +1,6 @@
 {
   "name": "@vgrid/x509",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Simple X509 certificate parser; forked verion from Southern/x509 and ampretia/node-x509",
   "author": "Colton Baker",
   "contributors": [
