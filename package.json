@@ -1,16 +1,28 @@
 {
-  "name": "@ampretia/x509",
-  "version": "0.4.8",
-  "description": "Simple X509 certificate parser; forked verion from Southern/x509",
+  "name": "@vgrid/x509",
+  "version": "1.0.0",
+  "description": "Simple X509 certificate parser; forked verion from Southern/x509 and ampretia/node-x509",
   "author": "Colton Baker",
   "contributors": [
     {
       "name": "Matthew White",
       "email": "whitemat@uk.ibm.com",
       "url": "https://github.com/mbwhite/"
+    },
+    {
+      "name": "Chris Wiggins",
+      "email": "chris@wiggins.nz",
+      "url": "https://github.com/chriswiggins/"
     }
   ],
   "main": "index.js",
+  "typings": "index.d.ts",
+  "files": [
+    "index.d.ts",
+    "index.js",
+    "README.md",
+    "build/"
+  ],
   "repository": {
     "type": "git",
     "url": "git@github.com:ampretia/node-x509.git"
@@ -25,15 +37,15 @@
   },
   "license": "MIT",
   "dependencies": {
-    "nan": "2.14.0"
+    "nan": "2.16.0"
   },
   "devDependencies": {
-    "chai": "^4.2.0",
-    "eslint": "^6.6.0",
-    "mocha": "^5.2.0",
-    "npm-cli-login": "^0.1.1",
-    "sinon": "^7.5.0",
-    "sinon-chai": "^3.3.0",
-    "standard-version": "^4.4.0"
+    "chai": "^4.3.6",
+    "eslint": "^8.16.0",
+    "mocha": "^10.0.0",
+    "npm-cli-login": "^1.0.0",
+    "sinon": "^14.0.0",
+    "sinon-chai": "^3.7.0",
+    "standard-version": "^9.5.0"
   }
 }

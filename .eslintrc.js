@@ -11,7 +11,7 @@ module.exports = {
         ecmaVersion: 8,
         sourceType: 'script'
     },
-    extends: "eslint:recommended",
+    extends: 'eslint:recommended',
     rules: {
         indent: ['error', 4],
         quotes: ['error', 'single'],
@@ -21,7 +21,6 @@ module.exports = {
         curly: 'error',
         eqeqeq: 'error',
         'no-throw-literal': 'error',
-        strict: 'error',
         'no-var': 'error',
         'dot-notation': 'error',
         'no-tabs': 'error',
