@@ -18,16 +18,19 @@
   "main": "index.js",
   "typings": "index.d.ts",
   "files": [
+    "binding.gyp",
+    "include",
     "index.d.ts",
     "index.js",
     "README.md",
-    "build/"
+    "src"
   ],
   "repository": {
     "type": "git",
     "url": "git@github.com:vgrid/node-x509.git"
   },
   "scripts": {
+    "install": "node-gyp rebuild",
     "lint": "eslint .",
     "configure": "node-gyp configure",
     "build": "npm run configure &&  node-gyp build",
