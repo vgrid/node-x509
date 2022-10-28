@@ -14,6 +14,7 @@ declare module '@vgrid/x509' {
 
   export interface CertificateSubject {
     countryName: string;
+    emailAddress?: string;
     postalCode: string;
     stateOrProvinceName: string;
     localityName: string;
@@ -21,7 +22,7 @@ declare module '@vgrid/x509' {
     organizationName: string;
     organizationalUnitName: string;
     commonName: string;
-    [key: string]: any;
+    [key: string]: string | undefined;
   }
 
   export interface CertificateResult {
@@ -47,8 +48,11 @@ declare module '@vgrid/x509' {
     version: number;
   }
 
-  export const getAltNames: (file: string) => CertificateAltNames;
-  export const getIssuer: (file: string) => CertificateIssuer;
-  export const getSubject: (file: string) => CertificateSubject;
-  export const parseCert: (file: string) => CertificateResult;
+  type VerifyCallback = (err: Error | null, result: boolean) => void;
+
+  export const getAltNames: (fileOrPath: string) => CertificateAltNames;
+  export const getIssuer: (fileOrPath: string) => CertificateIssuer;
+  export const getSubject: (fileOrPath: string) => CertificateSubject;
+  export const parseCert: (fileOrPath: string) => CertificateResult;
+  export const verify: (cert: path, caBundle: path, callback: VerifyCallback) => void;
 }
